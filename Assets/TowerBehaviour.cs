@@ -29,7 +29,7 @@ public class TowerBehaviour : MonoBehaviour {
         {
             GameObject bullet = Instantiate(bulletPrefab, bulletShootPlace.position, Quaternion.identity) as GameObject;
             bullet.GetComponent<Rigidbody>().AddForce(transform.right * 400);
-            tankRigidbody.AddForceAtPosition(transform.right * -1000, bulletShootPlace.position);
+            tankRigidbody.AddForceAtPosition(transform.right * -2000, bulletShootPlace.position);
         }
     }
 }
