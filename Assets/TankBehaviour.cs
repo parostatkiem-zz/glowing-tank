@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class TankBehaviour : MonoBehaviour {
 
    
@@ -22,10 +23,13 @@ public class TankBehaviour : MonoBehaviour {
     public GameObject enabledWhenDriving;
     public Transform tower;
 
+    public Text text;
 
     private Rigidbody rigid;
     float tankAngle;
     float currentVelocity;
+
+    public int KillCount = 0;
 
     List<float> tankAngles;
 
@@ -38,15 +42,26 @@ public class TankBehaviour : MonoBehaviour {
         particlesEnabledWhenDriving.Stop();
         tankAngles = new List<float>();
         rigid = GetComponent<Rigidbody>();
-   
+        text.enabled = false;
+    }
+
+    IEnumerator exitGame()
+    {
+        yield return new WaitForSeconds(5);
+        
+        SceneManager.LoadScene(1);
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
       
-        if (transform.position.y < 0)
+        if (transform.position.y < -5)
         {
-            //TODO: śmierć - spadł poza mape
+            Debug.Log("Dead with " + this.KillCount + "kills");
+            text.text = "To koniec! Twój wynik to: " + this.KillCount + ". Papa.";
+            text.enabled = true;
+
+            StartCoroutine(exitGame());
         }
 
         tankAngles.Clear();
