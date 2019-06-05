@@ -27,7 +27,7 @@ public class EnemyBehaviour : MonoBehaviour
         transform.LookAt(player);
         rigid.AddForce(transform.forward*(0.2f + deaths/200), ForceMode.VelocityChange);
 
-        if (transform.position.y < 0)
+        if (transform.position.y < -10)
         {
             // under the map
             Respawn();
