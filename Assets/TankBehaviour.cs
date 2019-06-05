@@ -38,14 +38,17 @@ public class TankBehaviour : MonoBehaviour {
         particlesEnabledWhenDriving.Stop();
         tankAngles = new List<float>();
         rigid = GetComponent<Rigidbody>();
-}
+   
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+      
         if (transform.position.y < 0)
         {
             //TODO: śmierć - spadł poza mape
         }
+
         tankAngles.Clear();
     
         if (Input.GetKey(KeyCode.W))

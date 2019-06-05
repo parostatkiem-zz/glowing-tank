@@ -28,8 +28,8 @@ public class TowerBehaviour : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             GameObject bullet = Instantiate(bulletPrefab, bulletShootPlace.position, Quaternion.identity) as GameObject;
-            bullet.GetComponent<Rigidbody>().AddForce(transform.right * 400);
-            tankRigidbody.AddForceAtPosition(transform.right * -2000, bulletShootPlace.position);
+            bullet.GetComponent<Rigidbody>().AddForce(transform.right * 1000);
+            tankRigidbody.AddForceAtPosition(transform.right * -4000, bulletShootPlace.position);
         }
     }
 }

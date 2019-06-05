@@ -11,6 +11,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     public Transform player;
 
+    public GameObject rotatingLight;
+
     private Vector3 spawnPoint;
     void Start()
     {
@@ -30,6 +32,7 @@ public class EnemyBehaviour : MonoBehaviour
             // under the map
             Respawn();
         }
+        rotatingLight.transform.RotateAroundLocal(Vector3.up, 0.2f);
     }
 
     void OnCollisionEnter(Collision col)
