@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4511959, g: 0.5009415, b: 0.57371277, a: 1}
+  m_IndirectSpecularColor: {r: 0.45119536, g: 0.50094116, b: 0.57371175, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 02659d0aee358a34d89ed2fc439061fc, type: 2}
 --- !u!1001 &88265384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -287,7 +287,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &216140652
 MeshCollider:
@@ -1449,8 +1449,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900368855}
-  m_LocalRotation: {x: 0.19434373, y: 0.5274556, z: 0.12539259, w: -0.8174948}
-  m_LocalPosition: {x: 28.361984, y: -1.2903908, z: 14.609659}
+  m_LocalRotation: {x: 0.21642967, y: 0.7217765, z: 0.25841898, w: -0.60449696}
+  m_LocalPosition: {x: 29.526789, y: -14.432824, z: 13.328494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1904,7 +1904,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1770165860
 Transform:

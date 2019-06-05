@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -13,9 +15,12 @@ public class EnemyBehaviour : MonoBehaviour
 
     public GameObject rotatingLight;
 
+    private NavMeshAgent nav;
+
     private Vector3 spawnPoint;
     void Start()
     {
+        nav = GetComponent<NavMeshAgent>();        
         rigid = GetComponent<Rigidbody>();
         spawnPoint = transform.position;
     }
@@ -23,10 +28,15 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
+
         // Move our position a step closer to the target.
+        nav.SetDestination(player.position);
+        /*
         transform.LookAt(player);
         rigid.AddForce(transform.forward*(0.2f + deaths/200), ForceMode.VelocityChange);
-
+        */
         if (transform.position.y < -10)
         {
             // under the map
