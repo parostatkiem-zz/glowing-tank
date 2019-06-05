@@ -49,7 +49,7 @@ public class TankBehaviour : MonoBehaviour {
     {
         yield return new WaitForSeconds(5);
         
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 	
 	// Update is called once per frame
