@@ -42,6 +42,10 @@ public class TankBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        if (transform.position.y < 0)
+        {
+            //TODO: śmierć - spadł poza mape
+        }
         tankAngles.Clear();
     
         if (Input.GetKey(KeyCode.W))
